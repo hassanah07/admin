@@ -1,8 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { GiHamburgerMenu } from "react-icons/Gi";
-import { AiOutlineCloseCircle } from "react-icons/Ai";
+import { FaBars, FaWindowClose } from "react-icons/fa";
+import { FiLogOut } from "react-icons/fi";
 import Image from "next/image";
 import { nav } from "../api/Nav";
 import { AdminNav } from "../api/AdminNav";
@@ -65,7 +65,7 @@ const Nav = () => {
                 );
               })}
             </ul>
-            <AiOutlineCloseCircle
+            <FaWindowClose
               className="absolute top-3 right-3 text-3xl text-white cursor-pointer md:hidden"
               onClick={() => {
                 setToggleNav(true);
@@ -79,7 +79,7 @@ const Nav = () => {
               setToggleNav(false);
             }}
           >
-            <GiHamburgerMenu className="text-5xl text-pink-800" />
+            <FaBars className="text-5xl text-pink-800" />
           </div>
         </div>
       )}
@@ -115,7 +115,7 @@ const Nav = () => {
                 <button onClick={logout}>Logout</button>
               </li>
             </ul>
-            <AiOutlineCloseCircle
+            <FaWindowClose
               className="absolute top-3 right-3 text-3xl text-white cursor-pointer"
               onClick={() => {
                 setToggleNav(true);
@@ -130,10 +130,7 @@ const Nav = () => {
             }}
           >
             <div className="cursor-pointer" title="Log Out">
-              <GiHamburgerMenu
-                className="text-5xl text-pink-800"
-                title="Log Out"
-              />
+              <FaBars className="text-5xl text-pink-800" title="Open Manu" />
             </div>
           </div>
         </div>
