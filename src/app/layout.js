@@ -15,14 +15,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="bg-purple-300 min-h-screen">
-        <Nav key={key} />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-
+          <Nav key={key} />
           {children}
         </ThemeProvider>
       </body>

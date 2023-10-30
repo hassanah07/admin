@@ -30,10 +30,10 @@ const Nav = () => {
   return (
     <>
       {!user.value && (
-        <div className="flex h-16">
+        <div className="flex h-16 bg-white dark:bg-black text-black dark:text-white">
           <nav className="py-4">
             <Link href="/adminlogin" className="flex" as={"/"}>
-              <span className="font-extrabold text-pink-600 text-2xl mt-1 uppercase shadow-2xl">
+              <span className="font-extrabold dark:text-white text-slate-700 text-2xl mt-1 uppercase shadow-2xl">
                 System Controller
               </span>
             </Link>
@@ -59,7 +59,7 @@ const Nav = () => {
                     }}
                   >
                     <li className="font-semibold mx-3 md:ml-auto capitalize text-slate-600 dark:text-white py-2 md:py-auto">
-                      Admin Login
+                      Admin Access
                     </li>
                     <hr className="md:hidden" />
                   </Link>
@@ -94,7 +94,7 @@ const Nav = () => {
                 : "absolute top-0 right-0  z-40"
             }
           >
-            <ul className="py-14 px-4 bg-pink-400 dark:bg-purple-500 w-48 rounded-bl-lg">
+            <ul className="py-14 px-4 bg-transparent w-48 rounded-bl-lg">
               {AdminNav.map((currElen, index) => {
                 return (
                   <Link
