@@ -66,14 +66,14 @@ const Page = () => {
   return (
     <>
       <ToastContainer />
-      <div className="flex flex-col min-h-screen items-center justify-center bg-purple-400">
-        <div className="md:w-[50%] bg-purple-500 shadow-2xl rounded-xl border-l-fuchsia-800">
+      <div className="flex flex-col min-h-screen items-center justify-center bg-white dark:bg-black">
+        <div className="md:w-[40%] bg-purple-200 dark:bg-slate-800 opacity-70 shadow-2xl dark:shadow-yellow-400 shadow-popover-foreground">
           <div className="card">
             <div className="cardHead py-5 text-center">
               <h1 className="font-bold text-2xl">Council Login</h1>
               <hr />
             </div>
-            <div className="cardbody py-5 bg-purple-300">
+            <div className="cardbody py-5 bg-purple-200 dark:bg-slate-800">
               <div className="flex py-2 px-8">
                 <input
                   type="email"
@@ -81,7 +81,7 @@ const Page = () => {
                   id="email"
                   value={email}
                   onChange={handleChange}
-                  className="text-black py-2 px-4 w-full"
+                  className="text-yellow-500 font-semibold py-2 px-4 w-full"
                   placeholder="User Name"
                 />
               </div>
@@ -93,7 +93,7 @@ const Page = () => {
                   id="password"
                   value={password}
                   onChange={handleChange}
-                  className="text-black py-2 px-4 w-full"
+                  className="text-yellow-500 font-semibold py-2 px-4 w-full"
                   placeholder="Enter Password"
                 />
               </div>
